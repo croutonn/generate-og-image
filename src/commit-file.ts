@@ -18,14 +18,14 @@ async function commitFile(
   const [owner, repo] = USER_REPO
 
   try {
-    await octokit.repos.createOrUpdateFile({
+    await octokit.repos.createOrUpdateFileContents({
       owner,
       repo,
       path: `${repoProps.assetPath || ''}${filename}.png`,
       branch: GITHUB_HEAD_REF,
       message: repoProps.commitMsg || '',
       content,
-      ...COMMITTER
+      ...COMMITTER,
     })
   } catch (err) {
     error(`Adding a commit to branch ${GITHUB_HEAD_REF} failed with ${err}`)
