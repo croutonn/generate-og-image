@@ -37,14 +37,14 @@ function generateHtml(prop: Partial<IRepoProps>) {
     <html lang="ja">
     <head>
       <meta charset="utf-8">
-      <link href="https://fonts.googleapis.com/css2?family=Amiko:wght@700&family=Noto+Sans+JP:wght@400;700&family=Open+Sans" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&family=Noto+Sans+JP:wght@400;700&family=Open+Sans" rel="stylesheet">
       <style>
         body {
           margin: 0;
           font-family: 'Open Sans', 'Noto Sans JP', sans-serif;
         }
         og-image-element {
-          --headingFont: 'Amiko', 'Noto Sans JP', sans-serif;
+          --headingFont: 'Rubik', 'Noto Sans JP', sans-serif;
           --headingWeight: 700;
           ${createVariables('fontColor', prop.fontColor)}
           ${createVariables('background', prop.background)}
