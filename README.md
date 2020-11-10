@@ -1,6 +1,6 @@
 # Open Graph Image Generator
 
-![](https://github.com/BoyWithSilverWings/generate-og-image/workflows/Run%20tests/badge.svg)
+![](https://github.com/croutonn/generate-og-image/workflows/Run%20tests/badge.svg)
 
 Generates open graph images for your blog with Github Actions.
 
@@ -113,7 +113,7 @@ The generator uses a web component to create the default output and provides a r
 
 The component currently being used is on [Github](https://github.com/croutonn/og-image-element) and published on [NPM](https://www.npmjs.com/package/@croutonn/og-image-element). The default URL is from [Unpkg](https://unpkg.com/) with [https://unpkg.com/@croutonn/og-image-element@0.2.3](https://unpkg.com/@croutonn/og-image-element@0.2.3).
 
-You can substitute the same with `componentUrl` input in your workflow file. For more info on creating this web component, visit [source](https://github.com/BoyWithSilverWings/generate-og-image/blob/304fd9aa0b21b01b0fdc8a3d1a63a19ffdc1840d/demo/test-file.jpg)
+You can substitute the same with `componentUrl` input in your workflow file. For more info on creating this web component, visit [source](https://github.com/croutonn/generate-og-image/blob/304fd9aa0b21b01b0fdc8a3d1a63a19ffdc1840d/demo/test-file.jpg)
 
 ## Contributing
 
