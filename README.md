@@ -11,7 +11,7 @@ If looks very bland without an image when you share the URL, but adding a cover 
 In your action file:
 
 ```yml
-name: "Generate OG Images"
+name: 'Generate OG Images'
 on: pull_request
 
 jobs:
@@ -22,7 +22,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
       - name: Generate Image
-        uses: BoyWithSilverWings/generate-og-image@1.0.3
+        uses: croutonn/generate-og-image@1.0.4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_CONTEXT: ${{ toJson(github) }}
@@ -36,11 +36,11 @@ For configuring the parameters, add following fields to the frontmatter:
 ---
 ogImage:
   title: "Things you don't know"
-  subtitle: "There must be something"
-  imageUrl: "https://example.com/image-url.jpg"
-  background: "yellow"
-  fontColor: "rgb(0, 0, 0)"
-  fontSize: "100%"
+  subtitle: 'There must be something'
+  imageUrl: 'https://example.com/image-url.jpg'
+  background: 'yellow'
+  fontColor: 'rgb(0, 0, 0)'
+  fontSize: '100%'
 ---
 ```
 

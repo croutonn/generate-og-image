@@ -1,34 +1,34 @@
-name: "Generate OG Image"
-description: "Helps users generate a OG Image from frontmatter"
-author: "Agney"
+name: 'Generate OG Image'
+description: 'Helps users generate a OG Image from frontmatter for japanese'
+author: 'croutonn'
 branding:
-  icon: "share-2"
-  color: "orange"
+  icon: 'share-2'
+  color: 'orange'
 inputs:
   path:
-    description: "Path to place generated assets"
-    default: "demo/"
+    description: 'Path to place generated assets'
+    default: 'demo/'
   commitMsg:
-    description: "commit message to be shown when adding image"
-    default: "just some wholesome content. yo all!"
+    description: 'commit message to be shown when adding image'
+    default: 'just some wholesome content. yo all!'
   background:
-    description: "background color for image"
-    default: "#ffffff"
+    description: 'background color for image'
+    default: '#ffffff'
   fontColor:
-    description: "font color for image"
-    default: "#000000"
+    description: 'font color for image'
+    default: '#000000'
   componentUrl:
-    description: "URL for web component"
-    default: "https://unpkg.com/@croutonn/og-image-element@0.2.3"
+    description: 'URL for web component'
+    default: 'https://unpkg.com/@croutonn/og-image-element@0.2.3'
   fontSize:
-    description: "Font size for the root"
-    default: "100%"
+    description: 'Font size for the root'
+    default: '100%'
   width:
-    description: "Width of the screen"
-    default: "1200"
+    description: 'Width of the screen'
+    default: '1200'
   height:
-    description: "Height of the screen"
-    default: "630"
+    description: 'Height of the screen'
+    default: '630'
 runs:
-  using: "docker"
-  image: "Dockerfile"
+  using: 'docker'
+  image: 'Dockerfile'
