@@ -22,7 +22,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
       - name: Generate Image
-        uses: croutonn/generate-og-image@1.0.5
+        uses: croutonn/generate-og-image@1.0.6
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_CONTEXT: ${{ toJson(github) }}
