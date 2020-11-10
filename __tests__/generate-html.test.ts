@@ -1,72 +1,79 @@
-import generateHtml from "../src/generate-html";
+import generateHtml from '../src/generate-html'
 
-describe("Generate HTML", () => {
+describe('Generate HTML', () => {
   it(`returns a string`, () => {
-    const result = generateHtml({});
-    expect(result).toBeTruthy();
-  });
+    const result = generateHtml({})
+    expect(result).toBeTruthy()
+  })
 
   it(`contains background variable`, () => {
     const result = generateHtml({
-      background: "{{name}}"
-    });
-    expect(result.includes("--background")).toBe(true);
-  });
+      background: '{{name}}',
+    })
+    expect(result.includes('--background')).toBe(true)
+  })
 
   it(`contains font color variable`, () => {
     const result = generateHtml({
-      fontColor: "{{name}}"
-    });
-    expect(result.includes("--fontColor")).toBe(true);
-  });
+      fontColor: '{{name}}',
+    })
+    expect(result.includes('--fontColor')).toBe(true)
+  })
 
   it(`contains font size variable`, () => {
     const result = generateHtml({
-      fontSize: "{{name}}"
-    });
-    expect(result.includes("--fontSize")).toBe(true);
-  });
+      fontSize: '{{name}}',
+    })
+    expect(result.includes('--fontSize')).toBe(true)
+  })
+
+  it(`contains heading size variable`, () => {
+    const result = generateHtml({
+      headingSize: '{{name}}',
+    })
+    expect(result.includes('--headingSize')).toBe(true)
+  })
 
   it(`contains passed in title`, () => {
     const result = generateHtml({
-      title: `{{name}}`
-    });
-    expect(result.includes("{{name}}")).toBe(true);
-    expect(result.includes(`slot="title"`)).toBe(true);
-  });
+      title: `{{name}}`,
+    })
+    expect(result.includes('{{name}}')).toBe(true)
+    expect(result.includes(`slot="title"`)).toBe(true)
+  })
 
   it(`creates html output for large payload`, () => {
     const result = generateHtml({
-      assetPath: "demo/",
-      componentUrl: "https://unpkg.com/@croutonn/og-image-element@0.2.3",
-      commitMsg: "just some wholesome content. yo all!",
-      background: "red",
-      fontColor: "yellow",
-      fontSize: "90%",
-      title: "Generating open graph images with Github Actions",
-      subtitle: "Works with Markdown files",
-      imageUrl: "https://avatars3.githubusercontent.com/u/8883368?s=40&v=4"
-    });
-    expect(result).toBeTruthy();
-  });
+      assetPath: 'demo/',
+      componentUrl: 'https://unpkg.com/@croutonn/og-image-element@0.2.4',
+      commitMsg: 'just some wholesome content. yo all!',
+      background: 'red',
+      fontColor: 'yellow',
+      fontSize: '90%',
+      title: 'Generating open graph images with Github Actions',
+      subtitle: 'Works with Markdown files',
+      imageUrl: 'https://avatars3.githubusercontent.com/u/8883368?s=40&v=4',
+    })
+    expect(result).toBeTruthy()
+  })
 
-  it("adds gradient as background", () => {
+  it('adds gradient as background', () => {
     const result = generateHtml({
-      background: "linear-gradient(to right, #000428, #004e92)"
-    });
-    expect(result.includes("linear-gradient(to right, #000428, #004e92)")).toBe(
+      background: 'linear-gradient(to right, #000428, #004e92)',
+    })
+    expect(result.includes('linear-gradient(to right, #000428, #004e92)')).toBe(
       true
-    );
-  });
+    )
+  })
 
-  it("process emojis", () => {
+  it('process emojis', () => {
     const result = generateHtml({
-      imageUrl: "😍",
-      title: "Generating open graph images with Github Actions",
-      subtitle: "Works with Markdown files",
-      componentUrl: "https://unpkg.com/@croutonn/og-image-element@0.2.3"
-    });
-    console.log(result);
-    expect(result.includes(`class="emoji"`)).toBe(true);
-  });
-});
+      imageUrl: '😍',
+      title: 'Generating open graph images with Github Actions',
+      subtitle: 'Works with Markdown files',
+      componentUrl: 'https://unpkg.com/@croutonn/og-image-element@0.2.4',
+    })
+    console.log(result)
+    expect(result.includes(`class="emoji"`)).toBe(true)
+  })
+})

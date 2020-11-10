@@ -19,10 +19,13 @@ inputs:
     default: '#000000'
   componentUrl:
     description: 'URL for web component'
-    default: 'https://unpkg.com/@croutonn/og-image-element@0.2.3'
+    default: 'https://unpkg.com/@croutonn/og-image-element@0.2.4'
   fontSize:
     description: 'Font size for the root'
     default: '100%'
+  headingSize:
+    description: 'Font size for the heading'
+    default: '4em'
   width:
     description: 'Width of the screen'
     default: '1200'

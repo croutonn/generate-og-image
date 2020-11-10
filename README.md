@@ -41,20 +41,22 @@ ogImage:
   background: 'yellow'
   fontColor: 'rgb(0, 0, 0)'
   fontSize: '100%'
+  headingSize: '4em'
 ---
 ```
 
 ## Frontmatter Props
 
-| Props      |               Description               | Required |                                Default                                |
-| ---------- | :-------------------------------------: | :------: | :-------------------------------------------------------------------: |
-| title      |           Title in the image            |          |                                                                       |
-| subtitle   |          Subtitle in the image          |          |                                                                       |
-| imageUrl   |     The image thumbnail on the top      |          |                                                                       |
-| background | Background color, gradient or image url |          |                                                                       |
-| fontColor  |         any css supported color         |          |                                                                       |
-| fontSize   |              the font size              |          |                                                                       |
-| fileName   |            name of the file             |          | title prop in [kebab](https://lodash.com/docs/4.17.15#kebabCase) case |
+| Props       |               Description               | Required |                                Default                                |
+| ----------- | :-------------------------------------: | :------: | :-------------------------------------------------------------------: |
+| title       |           Title in the image            |          |                                                                       |
+| subtitle    |          Subtitle in the image          |          |                                                                       |
+| imageUrl    |     The image thumbnail on the top      |          |                                                                       |
+| background  | Background color, gradient or image url |          |                                #ffffff                                |
+| fontColor   |         any css supported color         |          |                                #000000                                |
+| fontSize    |              the font size              |          |                                 100%                                  |
+| headingSize |      the font size for the heading      |          |                                  4em                                  |
+| fileName    |            name of the file             |          | title prop in [kebab](https://lodash.com/docs/4.17.15#kebabCase) case |
 
 Works only with Pull Requests and `md` and `mdx` files.
 
@@ -69,6 +71,7 @@ These are props that you can configure in the action file to customise the worki
 | background   | Background color, gradient or image url  |          |
 | fontColor    |         any css supported color          |          |
 | fontSize     |              the font size               |          |
+| headingSize  |      the font size for the heading       |          |
 | componentUrl | Web Component to be rendered for output. |          |
 
 Frontmatter level props on a document always takes precedence over Repository level props.
@@ -111,7 +114,7 @@ Frontmatter level props on a document always takes precedence over Repository le
 
 The generator uses a web component to create the default output and provides a repository level prop to customise this web component.
 
-The component currently being used is on [Github](https://github.com/croutonn/og-image-element) and published on [NPM](https://www.npmjs.com/package/@croutonn/og-image-element). The default URL is from [Unpkg](https://unpkg.com/) with [https://unpkg.com/@croutonn/og-image-element@0.2.3](https://unpkg.com/@croutonn/og-image-element@0.2.3).
+The component currently being used is on [Github](https://github.com/croutonn/og-image-element) and published on [NPM](https://www.npmjs.com/package/@croutonn/og-image-element). The default URL is from [Unpkg](https://unpkg.com/) with [https://unpkg.com/@croutonn/og-image-element@0.2.4](https://unpkg.com/@croutonn/og-image-element@0.2.4).
 
 You can substitute the same with `componentUrl` input in your workflow file. For more info on creating this web component, visit [source](https://github.com/croutonn/generate-og-image/blob/304fd9aa0b21b01b0fdc8a3d1a63a19ffdc1840d/demo/test-file.jpg)
 

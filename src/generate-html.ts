@@ -17,8 +17,8 @@ function getImageUrl(imageUrl?: string) {
   if (twemoji.test(imageUrl)) {
     return twemoji.parse(imageUrl, {
       attributes: () => ({
-        slot: 'image'
-      })
+        slot: 'image',
+      }),
     })
   }
   return `<img slot="image" src="${imageUrl}" height="100%" />`
@@ -49,6 +49,7 @@ function generateHtml(prop: Partial<IRepoProps>) {
           ${createVariables('fontColor', prop.fontColor)}
           ${createVariables('background', prop.background)}
           ${createVariables('fontSize', prop.fontSize)}
+          ${createVariables('headingSize', prop.headingSize)}
         }
       </style>
       <script type="module" rel="preload" src="${prop.componentUrl}"></script>
