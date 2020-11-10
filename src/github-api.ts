@@ -1,6 +1,8 @@
-import { getOctokit } from '@actions/github'
+import { GitHub, getOctokitOptions } from '@actions/github/lib/utils'
+import { retry } from '@octokit/plugin-retry'
 import { GITHUB_TOKEN } from './constants'
 
-const octokit = getOctokit(GITHUB_TOKEN as string)
+const Octokit = GitHub.plugin(retry)
+const octokit = new Octokit(getOctokitOptions(GITHUB_TOKEN as string))
 
 export default octokit
