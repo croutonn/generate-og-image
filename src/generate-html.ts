@@ -34,17 +34,18 @@ function getMarked(text?: string) {
 function generateHtml(prop: Partial<IRepoProps>) {
   return `
     <!doctype html>
-    <html lang="en-GB">
+    <html lang="ja">
     <head>
       <meta charset="utf-8">
-      <link href="https://fonts.googleapis.com/css?family=Nunito:600|Open+Sans&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Amiko:wght@700&family=Noto+Sans+JP:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
       <style>
         body {
           margin: 0;
-          font-family: 'Open Sans', sans-serif;
+          font-family: 'Open Sans', 'Noto Sans JP', sans-serif;
         }
         og-image-element {
-          --heading-font: 'Nunito', serif;
+          --headingFont: 'Amiko', 'Noto Sans JP', sans-serif;
+          --headingWeight: 700;
           ${createVariables("fontColor", prop.fontColor)}
           ${createVariables("background", prop.background)}
           ${createVariables("fontSize", prop.fontSize)}

@@ -111,7 +111,7 @@ Frontmatter level props on a document always takes precedence over Repository le
 
 The generator uses a web component to create the default output and provides a repository level prop to customise this web component.
 
-The component currently being used is on [Github](https://github.com/BoyWithSilverWings/og-image-element) and published on [NPM](https://www.npmjs.com/package/@agney/og-image-element). The default URL is from [Unpkg](https://unpkg.com/) with [https://unpkg.com/@agney/og-image-element@0.2.0](https://unpkg.com/@agney/og-image-element@0.2.0).
+The component currently being used is on [Github](https://github.com/croutonn/og-image-element) and published on [NPM](https://www.npmjs.com/package/@croutonn/og-image-element). The default URL is from [Unpkg](https://unpkg.com/) with [https://unpkg.com/@croutonn/og-image-element@0.2.3](https://unpkg.com/@croutonn/og-image-element@0.2.3).
 
 You can substitute the same with `componentUrl` input in your workflow file. For more info on creating this web component, visit [source](https://github.com/BoyWithSilverWings/generate-og-image/blob/304fd9aa0b21b01b0fdc8a3d1a63a19ffdc1840d/demo/test-file.jpg)
 

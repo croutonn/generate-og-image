@@ -38,7 +38,7 @@ describe("Generate HTML", () => {
   it(`creates html output for large payload`, () => {
     const result = generateHtml({
       assetPath: "demo/",
-      componentUrl: "https://unpkg.com/@agney/og-image-element@0.2.0",
+      componentUrl: "https://unpkg.com/@croutonn/og-image-element@0.2.3",
       commitMsg: "just some wholesome content. yo all!",
       background: "red",
       fontColor: "yellow",
@@ -64,7 +64,7 @@ describe("Generate HTML", () => {
       imageUrl: "😍",
       title: "Generating open graph images with Github Actions",
       subtitle: "Works with Markdown files",
-      componentUrl: "https://unpkg.com/@agney/og-image-element@0.2.0"
+      componentUrl: "https://unpkg.com/@croutonn/og-image-element@0.2.3"
     });
     console.log(result);
     expect(result.includes(`class="emoji"`)).toBe(true);
