@@ -1,34 +1,34 @@
-import marked from "marked";
-import twemoji from "twemoji";
+import marked from 'marked'
+import twemoji from 'twemoji'
 
-import { IRepoProps } from "./types";
+import { IRepoProps } from './types'
 
 function createVariables(name: string, value?: string) {
   if (value) {
-    return `--${name}: ${value};`;
+    return `--${name}: ${value};`
   }
-  return "";
+  return ''
 }
 
 function getImageUrl(imageUrl?: string) {
   if (!imageUrl) {
-    return "";
+    return ''
   }
   if (twemoji.test(imageUrl)) {
     return twemoji.parse(imageUrl, {
       attributes: () => ({
-        slot: "image"
+        slot: 'image'
       })
-    });
+    })
   }
-  return `<img slot="image" src="${imageUrl}" height="100%" />`;
+  return `<img slot="image" src="${imageUrl}" height="100%" />`
 }
 
 function getMarked(text?: string) {
   if (!text) {
-    return "";
+    return ''
   }
-  return marked(text);
+  return marked(text)
 }
 
 function generateHtml(prop: Partial<IRepoProps>) {
@@ -37,7 +37,7 @@ function generateHtml(prop: Partial<IRepoProps>) {
     <html lang="ja">
     <head>
       <meta charset="utf-8">
-      <link href="https://fonts.googleapis.com/css2?family=Amiko:wght@700&family=Noto+Sans+JP:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Amiko:wght@700&family=Noto+Sans+JP:wght@400;700&family=Open+Sans" rel="stylesheet">
       <style>
         body {
           margin: 0;
@@ -46,21 +46,21 @@ function generateHtml(prop: Partial<IRepoProps>) {
         og-image-element {
           --headingFont: 'Amiko', 'Noto Sans JP', sans-serif;
           --headingWeight: 700;
-          ${createVariables("fontColor", prop.fontColor)}
-          ${createVariables("background", prop.background)}
-          ${createVariables("fontSize", prop.fontSize)}
+          ${createVariables('fontColor', prop.fontColor)}
+          ${createVariables('background', prop.background)}
+          ${createVariables('fontSize', prop.fontSize)}
         }
       </style>
       <script type="module" rel="preload" src="${prop.componentUrl}"></script>
     </head>
     <body>
-      <og-image-element subtitle="${prop.subtitle || ""}">
+      <og-image-element subtitle="${prop.subtitle || ''}">
         ${getImageUrl(prop.imageUrl)}
         <div slot="title">${getMarked(prop.title)}</div>
       </og-image-element>
     </body>
     </html>
-  `;
+  `
 }
 
-export default generateHtml;
+export default generateHtml
