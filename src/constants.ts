@@ -22,7 +22,7 @@ const USER_REPO = (GITHUB_REPOSITORY as string).split("/");
 
 const COMMITTER = {
   name: "OG Bot",
-  email: "hello@agney.dev"
+  email: "action@github.com"
 };
 
 export {
