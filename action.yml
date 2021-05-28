@@ -19,7 +19,7 @@ inputs:
     default: '#000000'
   componentUrl:
     description: 'URL for web component'
-    default: 'https://unpkg.com/@croutonn/og-image-element@0.2.4'
+    default: 'https://cdn.jsdelivr.net/gh/croutonn/og-image-element/dist/og-image-element.js'
   fontSize:
     description: 'Font size for the root'
     default: '100%'
